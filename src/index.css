@@ -1,11 +1,18 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* ---------- CUSTOM PROPERTIES  ---------- */
+  --clr-neutral-100: #FFF;
+  --clr-neutral-200: #D5D4D8;
+  --gradient-1: linear-gradient(135deg, #006A79, #008C7E, #35AB67);
+  --gradient-2: linear-gradient(135deg, #35AB67, #008C7E, #006A79);
+  --gap-sm: .5em;
+  --gap-lg: 1.5em;
+
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-100);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,56 +21,46 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* ---------- UTILITY CLASSES  ---------- */
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
 }
-a:hover {
-  color: #535bf2;
+
+.flex-vert-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-sm);
 }
+
+/* ---------- TYPOGRAPHY  ---------- */
+
+.title {
+  font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+.project {
+  font-size: clamp(0.8rem, 0.7333rem + 0.2667vw, 1rem);
+}
+
+.btn-text {
+  font-size: clamp(1rem, 0.8833rem + 0.4667vw, 1.35rem);
+}
+
+.title,
+.btn-text {
+  font-weight: 700;
+}
+
+/* ---------- LAYOUT  ---------- */
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+header {
+  background-image: var(--gradient-1);
 }
