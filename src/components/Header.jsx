@@ -2,8 +2,8 @@ import logo from "/logo.png"
 
 const Header = () => {
   return (
-    <header>
-      <div className="site-title">
+    <header className="flex-between">
+      <div className="site-title flex-vert-center">
         <img src={logo} className="logo" alt="" />
         <h1 className="title">Meme Generator</h1>
       </div>

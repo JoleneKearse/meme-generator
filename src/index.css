@@ -26,6 +26,7 @@
 .flex-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .flex-vert-center {
@@ -39,6 +40,7 @@
 
 .title {
   font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
+  letter-spacing: -.02rem;
 }
 
 .project {
@@ -63,4 +65,10 @@ body {
 
 header {
   background-image: var(--gradient-1);
+  padding: 2em 1em;
+}
+
+.logo {
+  width: 1.75em;
+  aspect-ratio: 1;
 }
