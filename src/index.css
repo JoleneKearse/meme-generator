@@ -132,3 +132,7 @@ form {
 .icon {
   width: 1.5em;
 }
+
+.meme {
+  max-width: 100%;
+}
