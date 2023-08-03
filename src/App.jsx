@@ -6,7 +6,10 @@ function App() {
   return (
     <>
       <Header />
-      <Meme />
+      <main>
+        <Meme />
+      </main>
+      
     </>
   )
 }
